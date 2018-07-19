@@ -1,0 +1,1 @@
+spring-demo-oauth2-->adalah authorization server
