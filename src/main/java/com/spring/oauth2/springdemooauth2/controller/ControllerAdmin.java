@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerAdmin {
 
     @GetMapping(value = "/admin")
-    @PreAuthorize("PRIVILEGE_ADMIN_READ")
+    @PreAuthorize("hasAuthority('PRIVILEGE_ADMIN_READ')")
     public String adminAccess(){
         return "admin level success !";
     }

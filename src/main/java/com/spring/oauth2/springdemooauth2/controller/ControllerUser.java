@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerUser {
 
     @GetMapping(value = "/user")
-    @PreAuthorize("PRIVILEGE_USER_READ")
+    @PreAuthorize("hasAuthority('PRIVILEGE_USER_READ')")
     public String userAccess(){
         return "this is user access !";
     }

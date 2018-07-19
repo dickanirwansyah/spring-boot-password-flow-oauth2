@@ -54,16 +54,16 @@ public class CustomUserDetailsService implements UserDetailsService{
     }
 
     private List<String> getPrivilege(final Collection<Role> roles){
-        final List<String> privilege = new ArrayList<String>();
+        final List<String> privileges = new ArrayList<String>();
         final List<Privilege> colllection = new ArrayList<Privilege>();
         for (final Role role : roles){
             colllection.addAll(role.getPrivileges());
         }
 
         for (final Privilege item: colllection){
-            privilege.add(item.getName());
+            privileges.add(item.getName());
         }
-        return privilege;
+        return privileges;
     }
 
     private List<GrantedAuthority> getGrantedAuthorities(final List<String> privileges){
