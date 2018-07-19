@@ -26,7 +26,7 @@ public class OAuth2ServerConfiguration {
 
         @Autowired
         private JwtAccessTokenConverter jwtAccessTokenConverter;
-        
+
         @Override
         public void configure(final ResourceServerSecurityConfigurer resource) throws Exception{
             resource.tokenStore(new JwtTokenStore(jwtAccessTokenConverter));
